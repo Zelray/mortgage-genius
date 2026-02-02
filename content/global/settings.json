@@ -1,0 +1,23 @@
+{
+  "header": {
+    "phone": "(321) 555-0199",
+    "clientLoginUrl": "https://mortgagegenius.morty.com/login",
+    "applyOnlineUrl": "https://tinyurl.com/42xx3hzu"
+  },
+  "footer": {
+    "nmls": "2280851",
+    "companyName": "Mortgage Genius",
+    "tagline": "Your trusted mortgage broker in Arizona, Florida, and Texas",
+    "address": "Licensed in FL, AZ, TX",
+    "social": {
+      "facebook": "",
+      "linkedin": "",
+      "twitter": ""
+    }
+  },
+  "seo": {
+    "siteName": "Mortgage Genius",
+    "siteUrl": "https://mortgagegenius.com",
+    "defaultOgImage": ""
+  }
+}

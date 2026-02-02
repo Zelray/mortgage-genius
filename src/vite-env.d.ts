@@ -1,0 +1,31 @@
+/// <reference types="vite/client" />
+
+interface ImportMetaEnv {
+  readonly VITE_ADMIN_PASSWORD?: string;
+  // Add other env variables here as needed
+}
+
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
+}
+
+// Allow importing PNG images
+declare module '*.png' {
+  const value: string;
+  export default value;
+}
+
+declare module '*.jpg' {
+  const value: string;
+  export default value;
+}
+
+declare module '*.jpeg' {
+  const value: string;
+  export default value;
+}
+
+declare module '*.svg' {
+  const value: string;
+  export default value;
+}

@@ -1,0 +1,94 @@
+Backend Admin Panel
+
+**Roles & Permissions:**
+
+* Admin: full access
+* Editor: can edit content, blog posts, meta, schema
+* Lead manager: view/manage leads, no content edits
+
+**Admin Features:**
+
+* WYSIWYG editor for all pages, including:
+
+  * Headline, subheadline, body content
+  * Images (with alt text and preview)
+  * Meta title, meta description, Open Graph tags, Twitter Card
+  * Schema markup per page (Organization, LocalBusiness, FAQPage, Review, Breadcrumb)
+* Create/edit/delete pages with templates for loan types, state pages, blog posts
+* Version history (last 10 edits) and rollback
+* Bulk find/replace
+* Lead management: table, filters, sorting, export, Close CRM sync
+* Blog system: rich text editor, categories, SEO fields, scheduling
+* Rate management: by loan type and state, toggle manual/API rates, history
+* Form submissions & analytics dashboards
+* Site settings: business info, social links, notifications, SMTP, maintenance mode
+
+**Security:**
+
+* Login with strong password
+* Two-factor authentication
+* Session timeout 2 hours
+* Activity logging
+
+---
+
+### 3️⃣ Database & API
+
+**Database Tables (core):**
+
+* `leads`, `applications`, `appointments`, `blog_posts`, `rates`, `form_submissions`, `analytics`
+* Proper foreign key relationships
+* Indexed columns for performance (`state`, `loan_type`, `status`)
+* Soft delete flag on relevant tables
+
+**REST API (/api/v1):**
+
+* CRUD for leads, blog posts, rates, analytics
+* Pagination, filtering, sorting for GET endpoints
+* Webhooks for n8n: new lead, appointment booked, application started, blog published, rate change
+* API security: key-based auth, rate limiting, HMAC signature verification
+
+---
+
+### 4️⃣ Chatbot
+
+* TypeBot on right side of header
+
+---
+
+### 5️⃣ Integrations
+
+* Close CRM (two-way sync, webhook mapping)
+* Google Calendar (OAuth, event creation, reminders, Zoom link)
+* Slack (#leads notifications)
+* SendGrid (transactional emails, CC to [mg@mortgagegenius.pro](mailto:mg@mortgagegenius.pro))
+* Zillow Rates API (cache, fallback)
+* GA4, Facebook Pixel
+* Optional: Recaptcha, Google Tag Manager
+
+---
+
+### 6️⃣ SEO & Performance
+
+**SEO:**
+
+* Meta title/description editable per page
+* Open Graph, Twitter Card tags
+* Schema markup: Organization, LocalBusiness, FAQ, BlogPosting, BreadcrumbList, Review
+* Sitemap.xml, robots.txt, canonical URLs
+* Alt text, descriptive filenames, responsive WebP images
+
+**Performance:**
+
+* Lighthouse 90+
+* FCP <1.8s, LCP <2.5s, CLS <0.1
+* Lazy-load, code splitting, inline critical CSS, async scripts
+* CDN for static assets, caching headers, Gzip
+
+---
+
+### 7️⃣ Legal / Compliance
+
+* Privacy Policy, Terms, NMLS link, Equal Housing Lender disclosure
+* APR, “Not a commitment to lend” disclaimers
+* State-specific licensing numbers where relevant

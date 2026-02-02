@@ -1,0 +1,12 @@
+# IP Whitelist for Admin Access
+# Add one IP address per line
+# Lines starting with # are comments
+# Format: IP_ADDRESS,DESCRIPTION
+
+# Example IPs - Replace with your actual IPs
+127.0.0.1,Localhost
+::1,Localhost IPv6
+
+# Add your IP addresses below:
+# 123.456.789.012,Your Office IP
+# 98.765.432.109,Your Home IP
